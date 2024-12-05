@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app/
+      - ./backend/public:/app/public/
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+      - ./frontend/.env
+    ports:
+      - "5173:5173"
+      - "8080:8080"
+    volumes:
+      - ./frontend:/app/
+      - ./frontend/public:/app/public/
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      CHOKIDAR_USEPOLLING: 1

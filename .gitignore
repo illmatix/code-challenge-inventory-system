@@ -1,0 +1,48 @@
+# Node.js dependencies
+node_modules/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite
+.vite/
+
+# Docker
+docker-compose.override.yml
+.docker/
+*.pid
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+
+# Python virtual environment
+.venv/
+
+# Flask environment
+instance/
+.env
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Git
+*.swp
+*.lock
+*.log
+*.bak
+*.tmp

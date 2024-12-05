@@ -1,0 +1,6 @@
+// Use variables and mixins from the variables file
+@use './variables' as vars;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
